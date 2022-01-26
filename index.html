@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>BUILDING PARAGRAPHS USING JOIN FUNCTION</title>
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_-i9sSvAKPKKKk7Sz79nueFOz-mx_ZJL-t0diOge4QjNliGB-vtmNu2gLNpDFhSpMsK97MVuYCAxjR4HZVUp3fEVo_zHe6E1BCJxlFOR5uU9BXKUmpGFVcvVSNILL1bPMBxZ7H-j-ZJkoLIvUi0Tqg"
+        charset="UTF-8"></script>
+</head>
+<center>
+<body background="bg.jpg">
+        <h1>BUILDING PARAGRAPHS USING JOIN FUNCTION</h1>
+        <div id="div_1" style="float: left;">
+            <h4> <span>1 )</span>
+                <input style="border-width:2px;border-radius:5px;" type="text" id="div2_input_box_1"
+                    placeholder="Input box">
+
+                <br>
+                <br>
+                <span>2 )</span>
+                <input style="border-width:2px;border-radius:5px;" type="text" id="div2_input_box_2"
+                    placeholder="Input box">
+                <br>
+                <br>
+                <span>3 )</span>
+                <input style="border-width:2px;border-radius:5px;" type="text" id="div2_input_box_3"
+                    placeholder="Input box">
+                <br>
+                <br>
+                <span>4 )</span>
+                <input style="border-width:2px;border-radius:5px;" type="text" id="div2_input_box_4"
+                    placeholder="Input box">
+                <br>
+                <br>
+                <span>5 )</span>
+                <input style="border-width:2px;
+                  border-radius:5px;" type="text" id="div2_input_box_5"
+                    placeholder="Input box">
+                <br>
+                <br>
+                <span>6 )</span>
+                <input style="border-width:2px;border-radius:5px;" type="text" id="div2_input_box_6"
+                    placeholder="Input box">
+            </h4>
+            <button id="2" class="button button3" onclick="Paragraph2()">
+                Get paragraph 1</button> <br>
+            <h1 id="showParagraph2">
+            </h1>
+        </div>
+        <div id="div_2" style="float: right;">
+            <h4> <span>1 )</span>
+                <input style="border-width:2px;;border-radius:5px;" type="text" id="div1_input_box_1"
+                    placeholder="Input box ">
+                <br><br> <span>
+                    2 )</span> <input style="border-width:2px;border-radius:5px;"
+                    type="text" id="div1_input_box_2" placeholder="Input box "> <br><br> <span>
+                        3 )</span> <input
+                    style="border-width:2px;border-radius:5px;" type="text" id="div1_input_box_3"
+                    placeholder="Input box "> <br><br> <span>
+                        4 )</span> <input
+                    style="border-width:2px;border-radius:5px;" type="text" id="div1_input_box_4"
+                    placeholder="Input box "> <br><br> <span
+                    >5 )</span> <input
+                    style="border-width:2px;border-radius:5px;" type="text"
+                    id="div1_input_box_5" placeholder="Input box "> <br><br> <span>
+                        6 )</span> <input
+                    style="border-width:2px;border-radius:5px;" type="text" id="div1_input_box_6"
+                    placeholder="Input box "> </h4> <button id="1" class="button button3" onclick="Paragraph1()">Get
+                paragraph 2</button> <br>
+            <h1 id="showParagraph1"></h1>
+        </div>
+        <h1 id="joinall"></h1>
+    <br>
+</body>
+</center>
+</html>
+<script>
+    function Paragraph1() {
+        var inputs = [];
+        for (var i = 1; i <= 6; i++) {
+            inputs.push(document.getElementById("div1_input_box_" + i).value);
+        }
+        document.getElementById("showParagraph1").innerHTML = inputs.join(" ");
+    }
+
+    function Paragraph2() {
+        var inputs = [];
+        for (var i = 1; i <= 6; i++) {
+            inputs.push(document.getElementById("div2_input_box_" + i).value);
+        }
+        document.getElementById("showParagraph2").innerHTML = inputs.join(" ");
+    }
+</script>
